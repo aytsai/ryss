@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en"> <!--  oncontextmenu="return false;" -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Ryss Lab, Inc.</title>
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../static/img/favicon-196x196.png" sizes="196x196">
+    
+    <!-- meta -->
+		<meta name="description" content="Homepage of Ryss Lab">
+    <meta name="keywords" content="contract, r&d, manufacturing, chemistry, lab">
+    <meta name="robots" content="noarchive, noimageindex" />
+    <meta name="googlebot" content="noarchive, noimageindex" />
+		
+		<!-- css -->
+		<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/ryss.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		
+		<!-- scripts -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  </head>
+  <body class="noselect">
+    <noscript>Your browser currently has JavaScript disabled! Please turn it back on for the best viewing experience.</noscript>
+
+    <nav class="navbar navbar-default navbar-fixed-top homenav">
+        <div class="navbar-header">
+          <button type="button" class="burger navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navrow col-xs-6 col-sm-5">
+            <a href="#">
+              <img class="center-block" src="../static/img/ryss.png" alt="RYSS">
+            </a>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="navvie" class="col-xs-6 col-sm-9">
+      <ul>
+        <li class="dropdown">
+          <a class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">About <span class="glyphicon glyphicon-menu-down"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../about-us/index.html#">Company Overview</a></li>
+            <li><a href="../about-us/index.html#mission">Mission & Values</a></li>
+            <li><a href="../about-us/index.html#facilities">Our Facilities</a></li>
+          </ul>
+        </li> <!-- About -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <span class="glyphicon glyphicon-menu-down"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../services/index.html#">Our Approach</a></li>
+            <li><a href="../services/index.html#expertises">Our Expertises</a></li>
+            <li><a href="../services/index.html#services">List of Services</a></li>
+          </ul>
+        </li> <!-- Services -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Contact Us <span class="glyphicon glyphicon-menu-down"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../contact-us/index.html">Locations</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </li> <!-- Contact Us -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Family & Partners</a>
+        </li> <!-- Family & Partners -->
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="serv">
+        <div class="row">
+          <div class="current-page">
+            Home / <span class="current-sec">Contact Us</span>
+          </div>
+        </div>
+      </div>
+      <div class="serv" id="headquarters">
+        <div class="row">
+          <h5>Ryss Headquarters (USA)</h5>
+          <div class="col-md-6">
+            <h6>Address</h6>
+            Ryss Lab<br/>
+            29540 Kohoutek Way<br/>
+            Union City, CA 94587
+            <h6>Details</h6>
+            Tel: +1 510 477 9570<br/>
+            Fax: +1 510 477 0534<br/>
+            
+            General inquiries: info -AT- ryss.com<br/>
+            Sales inquiries: sales -AT- ryss.com<br/>
+          </div>
+          <div class="col-md-6">
+            <div id="hqmap" class="map"></div>
+          </div>
+        </div>
+      </div>
+      <div class="serv grey-sec" id="taiwan">
+        <div class="row">
+          <h5>R&D Center (Taiwan)</h5>
+          <div class="col-md-6">
+          <h6>Address</h6>
+              Ryss R&D Center<br/>
+              TBA
+              <h6>Details</h6>
+              TBA<br/>
+              
+              General inquiries: TBA
+          </div>
+          <div class="col-md-6">
+            <div id="twmap" class="map"></div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- something -->
+      
+    <footer>
+      Copyright © 2016 Ryss Lab, Inc. | <a href="../terms/">Terms and Conditions</a>
+    </footer>
+
+    <!-- scripts (last for faster loading) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/ryss.js"></script>
+  </body>
+</html>
