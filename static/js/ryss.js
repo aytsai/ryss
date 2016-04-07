@@ -81,7 +81,7 @@ $(document).ready(function(){
   if ($(window.location.hash).length && $(window.location.hash) != 'overview'
                                      && $(window.location.hash) != 'approach') {
     var scrollOff;
-    if ($('#burger').css('display') == 'none')
+    if ($('.burger').css('display') == 'none')
       scrollOff = 100;
     else
       scrollOff = 70;
@@ -126,6 +126,15 @@ fix the scroll offset*/
 
 /* animated scroll */
 $('a[href*="#"]:not([href="#"])').click(function() {
+  /* close the navbar if mobile */
+  if ($('.burger').css('display') == 'block' && $('.container').hasClass('opened')) {
+    $('.container').removeClass('opened').addClass('closed');
+    $('#navvie').removeClass('opened').addClass('closed');
+    $('nav').removeClass('opened').addClass('closed');
+    $('footer').removeClass('opened').addClass('closed');
+  }
+  
+  /* begin scroll */
   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -134,7 +143,7 @@ $('a[href*="#"]:not([href="#"])').click(function() {
       if (target == "about" || target == "overview")
         scrollOff = 0;
       else if ($(window).scrollTop() <= 5) {
-        if ($('#burger').css('display') == 'none')
+        if ($('.burger').css('display') == 'none')
           scrollOff = 100;
         else
           scrollOff = 70;
