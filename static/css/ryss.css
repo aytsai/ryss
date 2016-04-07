@@ -309,7 +309,14 @@ h6 {
 }
 
 .grey-sec {
-  background-color: #E6E6E6;
+  background: linear-gradient(
+  to bottom,
+  #E6E6E6,
+  #E6E6E6 80%,
+  #F0F0F0 20%,
+  #F0F0F0
+  );
+  background-size: 100% 6px;
 }
 
 .map {
@@ -323,8 +330,13 @@ h6 {
 
 .carousel .item {
   height: 440px;
+  background-color: #125925;
   background-size: cover;
-  background-position: center bottom;
+  background-position: left center;
+}
+
+.carousel .item-right {
+  background-position: right center;
 }
 
 @media only screen and (max-width: 1103px) {
@@ -337,6 +349,16 @@ h6 {
   .carousel .item {
     height: 400px;
   }
+}
+
+@media only screen and (max-height: 320px) {
+  .carousel .item {
+    height: 250px;
+  }
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
 }
 
 /********************* side collapse ********************/
