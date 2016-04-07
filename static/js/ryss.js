@@ -81,6 +81,7 @@ $(document).ready(function(){
   if ($(window.location.hash).length && window.location.hash != '#overview'
                                      && window.location.hash != '#approach') {
     var scrollOff;
+    console.log ("hellooooooooooooo");
     if ($('.burger').css('display') == 'none')
       scrollOff = 100;
     else
