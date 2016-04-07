@@ -115,7 +115,12 @@ $('a[href*="#"]:not([href="#"])').click(function() {
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
     if (target.length) {
-      if ($(window).scrollTop() <= 5) {
+      if (target == "about" || target == "overview") {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 700);
+      }
+      else if ($(window).scrollTop() <= 5) {
         $('html, body').animate({
           scrollTop: target.offset().top - 100
         }, 700);
