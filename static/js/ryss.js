@@ -78,8 +78,7 @@ $(document).ready(function(){
     google.maps.event.addDomListener(window, 'load', init_map);
     google.maps.event.addDomListener(window, 'load', init_map2);
   }
-  if ($(window.location.hash).length && window.location.hash != '#overview'
-                                     && window.location.hash != '#approach') {
+  if ($(window.location.hash).length) {
     var scrollOff;
     if ($('.burger').css('display') == 'none')
       scrollOff = 100;
