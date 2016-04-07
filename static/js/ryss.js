@@ -73,15 +73,16 @@ function navAdjust (x) {
 }
 
 $(document).ready(function(){
-  // TODO: check page before running function
   navAdjust(targetHeight);
   if ($('#hqmap').length) {
     google.maps.event.addDomListener(window, 'load', init_map);
     google.maps.event.addDomListener(window, 'load', init_map2);
   }
-  $('html,body').animate({
-    scrollTop: $(window.location.hash).offset().top
-  }, 700);
+  if ($(window.location.hash).length) {
+    $('html,body').animate({
+      scrollTop: $(window.location.hash).offset().top
+    }, 700);
+  }
 });
 
 $(window).resize(function(){
