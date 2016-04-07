@@ -80,8 +80,13 @@ $(document).ready(function(){
   }
   if ($(window.location.hash).length && $(window.location.hash) != 'overview'
                                      && $(window.location.hash) != 'approach') {
+    var scrollOff;
+    if ($('#burger').css('display') == 'none')
+      scrollOff = 100;
+    else
+      scrollOff = 70;
     $('html,body').animate({
-      scrollTop: $(window.location.hash).offset().top - 100
+      scrollTop: $(window.location.hash).offset().top - scrollOff
     }, 700);
   }
 });
@@ -129,7 +134,7 @@ $('a[href*="#"]:not([href="#"])').click(function() {
       if (target == "about" || target == "overview")
         scrollOff = 0;
       else if ($(window).scrollTop() <= 5) {
-        if ($('#navvie').css('display') == 'none')
+        if ($('#burger').css('display') == 'none')
           scrollOff = 100;
         else
           scrollOff = 70;
