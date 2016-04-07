@@ -74,9 +74,14 @@ function navAdjust (x) {
 
 $(document).ready(function(){
   // TODO: check page before running function
-    navAdjust(targetHeight);
+  navAdjust(targetHeight);
+  if ($('#hqmap').length) {
     google.maps.event.addDomListener(window, 'load', init_map);
     google.maps.event.addDomListener(window, 'load', init_map2);
+  }
+  $('html,body').animate({
+    scrollTop: $(window.location.hash).offset().top
+  }, 700);
 });
 
 $(window).resize(function(){
@@ -109,7 +114,7 @@ function init_map2() {
   marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(37.6082651,-122.0829269)});
 }
 
-/* TODO: animated scroll */
+/* animated scroll */
 $('a[href*="#"]:not([href="#"])').click(function() {
   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
     var target = $(this.hash);
