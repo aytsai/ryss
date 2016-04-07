@@ -151,7 +151,6 @@ $('a[href*="#"]:not([href="#"])').click(function() {
       $('html, body').animate({
         scrollTop: target.offset().top - scrollOff
       }, 700);
-      return false;
     }
   }
 });
