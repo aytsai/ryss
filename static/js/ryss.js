@@ -81,7 +81,6 @@ $(document).ready(function(){
   if ($(window.location.hash).length && window.location.hash != '#overview'
                                      && window.location.hash != '#approach') {
     var scrollOff;
-    console.log ("hellooooooooooooo");
     if ($('.burger').css('display') == 'none')
       scrollOff = 100;
     else
@@ -138,7 +137,7 @@ $('a[href*="#"]:not([href="#"])').click(function() {
     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
     var scrollOff;
     if (target.length) {
-      if (target == "about" || target == "overview")
+      if (target == "#about" || target == "#overview")
         scrollOff = 0;
       else if ($(window).scrollTop() <= 5) {
         if ($('.burger').css('display') == 'none')
