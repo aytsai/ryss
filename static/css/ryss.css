@@ -86,7 +86,7 @@ footer a {
   transition: color 500ms;
 }
 
-footer a:hover, ul li a:hover, ul li a:focus, .home:hover, .home:focus {
+.description  a:hover, .description a:focus, footer a:hover, ul li a:hover, ul li a:focus, .home:hover, .home:focus {
   color: #8FB357;
   text-decoration: none;
 }
@@ -146,11 +146,15 @@ footer a:hover, ul li a:hover, ul li a:focus, .home:hover, .home:focus {
   cursor: default;
 }
 
-ul li a {
+ul li a, .description a {
   color: #084D1B;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 17px;
   transition: color 200ms;
+}
+
+.description a {
+  font-size: 18px;
 }
 
 ul li a:hover, ul li a:focus {
@@ -316,6 +320,17 @@ h6 {
 
 .map {
   min-height: 260px;
+}
+
+.description {
+  margin-top: 25px;
+}
+
+.description img {
+  text-align: center;
+  max-width: 180px;
+  margin: auto;
+  padding-bottom: 10px;
 }
 
 /********************* carousel control ********************/
