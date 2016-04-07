@@ -78,8 +78,8 @@ $(document).ready(function(){
     google.maps.event.addDomListener(window, 'load', init_map);
     google.maps.event.addDomListener(window, 'load', init_map2);
   }
-  if ($(window.location.hash).length && $(window.location.hash) != 'overview'
-                                     && $(window.location.hash) != 'approach') {
+  if ($(window.location.hash).length && $(window.location.hash) != '#overview'
+                                     && $(window.location.hash) != '#approach') {
     var scrollOff;
     if ($('.burger').css('display') == 'none')
       scrollOff = 100;
@@ -120,9 +120,6 @@ function init_map2() {
   map = new google.maps.Map(document.getElementById("twmap"), myOptions);
   marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(37.6082651,-122.0829269)});
 }
-
-/* TODO: when link is clicked, close sidebar if open 
-fix the scroll offset*/
 
 /* animated scroll */
 $('a[href*="#"]:not([href="#"])').click(function() {
