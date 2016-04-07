@@ -137,6 +137,7 @@ $('a[href*="#"]:not([href="#"])').click(function() {
     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
     var scrollOff;
     if (target.length) {
+      console.log (target);
       if (target == "#about" || target == "#overview")
         scrollOff = 0;
       else if ($(window).scrollTop() <= 5) {
