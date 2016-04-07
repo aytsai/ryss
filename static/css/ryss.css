@@ -264,11 +264,6 @@ ul li a:hover, ul li a:focus {
   font-size: 16px;
 }
 
-h2 {
-  font-size: 25px;
-  color: #6B9131;
-}
-
 h3 {
   font-size: 20px;
   font-weight: bold;
@@ -320,7 +315,7 @@ h6 {
 }
 
 .map {
-   min-height: 300px;
+  min-height: 260px;
 }
 
 /********************* carousel control ********************/
@@ -333,6 +328,8 @@ h6 {
   background-color: #125925;
   background-size: cover;
   background-position: left center;
+  color: #FFFFFF;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .carousel .item-right {
@@ -345,9 +342,33 @@ h6 {
   }
 }
 
+@media only screen and (max-width: 773px) {
+  .carousel .item {
+    height: 335px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .carousel .item {
     height: 400px;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  .carousel .item {
+    height: 344px;
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  .carousel .item {
+    height: 305px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .carousel .item {
+    height: 290px;
   }
 }
 
@@ -359,6 +380,89 @@ h6 {
 
 .carousel-control.left, .carousel-control.right {
     background-image: none
+}
+
+h2 {
+  font-size: 50px;
+  margin: 0 0 20px 0;
+}
+
+.carousel-text-right, .carousel-text-left  {
+  height: auto;
+  width: 600px;
+  font-size: 22px;
+  position: absolute;
+  top: 50%;
+}
+
+.carousel-text-right {
+  right: 0;
+  margin-right: 10%;
+  transform: translate(0,-50%);
+}
+
+.carousel-text-left {
+  left: 0;
+  margin-left: 10%;
+  transform: translate(0,-50%);
+}
+
+@media only screen and (max-width: 1024px) {
+  .carousel-text-right {
+    width: 400px;
+    margin-right: 7%;
+  }
+
+  .carousel-text-left {
+    width: 400px;
+    margin-left: 7%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .carousel-text-right {
+    width: 400px;
+    margin-right: 2%;
+  }
+
+  .carousel-text-left {
+    width: 400px;
+    margin-left: 6%;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .carousel-text-right, .carousel-text-left {
+    text-align: center;
+    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .carousel-text-left {
+    transform: translate(0,-50%);
+  }
+  
+  .carousel-text-right {
+    transform: translate(76%,-50%);
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .carousel-text-right, .carousel-text-left {
+    padding: 0 15px;
+    float: none;
+    text-align: center;
+    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+    
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 200px;
+  }
 }
 
 /********************* side collapse ********************/
