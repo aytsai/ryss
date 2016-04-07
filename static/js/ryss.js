@@ -105,6 +105,7 @@ $('.container').click(function() {
     $('.container').removeClass('opened').addClass('closed');
     $('#navvie').removeClass('opened').addClass('closed');
     $('nav').removeClass('opened').addClass('closed');
+    $('footer').removeClass('opened').addClass('closed');
   }
 })
 
