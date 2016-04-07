@@ -79,9 +79,9 @@ $(document).ready(function(){
     google.maps.event.addDomListener(window, 'load', init_map2);
   }
   if ($(window.location.hash).length && $(window.location.hash) != 'overview'
-                                     && $(window.location.hash) != 'approach')) {
+                                     && $(window.location.hash) != 'approach') {
     $('html,body').animate({
-      scrollTop: $(window.location.hash).offset().top - 50
+      scrollTop: $(window.location.hash).offset().top - 100
     }, 700);
   }
 });
