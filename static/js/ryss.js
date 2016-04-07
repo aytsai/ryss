@@ -116,27 +116,30 @@ function init_map2() {
   marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(37.6082651,-122.0829269)});
 }
 
+/* TODO: when link is clicked, close sidebar if open 
+fix the scroll offset*/
+
 /* animated scroll */
 $('a[href*="#"]:not([href="#"])').click(function() {
   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    var scrollOff;
     if (target.length) {
-      if (target == "about" || target == "overview") {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 700);
-      }
+      if (target == "about" || target == "overview")
+        scrollOff = 0;
       else if ($(window).scrollTop() <= 5) {
-        $('html, body').animate({
-          scrollTop: target.offset().top - 100
-        }, 700);
+        if ($('#navvie').css('display') == 'none')
+          scrollOff = 100;
+        else
+          scrollOff = 70;
       }
       else {
-        $('html, body').animate({
-          scrollTop: target.offset().top - 50
-        }, 700);
+        scrollOff = 50;
       }
+      $('html, body').animate({
+        scrollTop: target.offset().top - scrollOff
+      }, 700);
       return false;
     }
   }
