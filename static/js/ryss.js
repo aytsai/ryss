@@ -112,13 +112,17 @@ $('.container').click(function() {
 function init_map() {
   var myOptions = {zoom: 14, center: new google.maps.LatLng(37.6082651,-122.0829269), mapTypeId: google.maps.MapTypeId.ROADMAP};
   map = new google.maps.Map(document.getElementById("hqmap"), myOptions);
-  marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(37.6082651,-122.0829269)});
+  marker = new google.maps.Marker({map: map,
+                                   position: new google.maps.LatLng(37.6082651,-122.0829269),
+                                   icon: '../static/img/marker.png'});
 }
 
 function init_map2() {
-  var myOptions = {zoom: 14, center: new google.maps.LatLng(37.6082651,-122.0829269), mapTypeId: google.maps.MapTypeId.ROADMAP};
+  var myOptions = {zoom: 14, center: new google.maps.LatLng(25.0295289,121.4128502), mapTypeId: google.maps.MapTypeId.ROADMAP};
   map = new google.maps.Map(document.getElementById("twmap"), myOptions);
-  marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(37.6082651,-122.0829269)});
+  marker = new google.maps.Marker({map: map,
+                                   position: new google.maps.LatLng(25.0295289,121.4128502),
+                                   icon: '../static/img/marker.png'});
 }
 
 /* animated scroll */
