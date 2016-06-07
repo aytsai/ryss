@@ -80,13 +80,13 @@ footer {
   text-align: center;
 }
 
-footer a {
+footer a, #home-button a {
   color: #FFF;
   text-decoration: none;
   transition: color 500ms;
 }
 
-.description  a:hover, .description a:focus, footer a:hover, ul li a:hover, ul li a:focus, .home:hover, .home:focus {
+.description  a:hover, .description a:focus, footer a:hover, #home-button a:hover, ul li a:hover, ul li a:focus, .home:hover, .home:focus {
   color: #8FB357;
   text-decoration: none;
 }
@@ -119,8 +119,10 @@ footer a {
 
 #secondary-menu {
   height: 28px;
+  text-align: center;
   width: 100%;
   line-height: 28px;
+  font-size: 11px;
   color: #FFFFFF;
   background-color: #125925;
 }
@@ -138,11 +140,12 @@ footer a {
 #home-button {
   position: fixed;
   right: 0;
+  text-align: center;
 }
 
 .navbar-header {
   position: absolute;
-  top: 60%;
+  top: 64%;
   left: 50%;
   height: auto;
   transform: translate(-50%,-50%);
@@ -383,6 +386,11 @@ h6 {
   .carousel .item {
     height: 335px;
   }
+  
+    #secondary-menu {
+      height: 28px;
+      text-align: left;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -530,21 +538,19 @@ h2 {
 }
 
 /* 1010px + 20px scrollbar */
-@media only screen and (min-width: 1070px) {
-  #navvie {
-    padding-left: 33%;
-  }
-  
+@media only screen and (min-width: 1177px) {
   #terms, .serv {
     padding: 0 8%;
   }
 }
 
-@media only screen and (max-width: 1069px) {
-  #navvie {
-    padding-left: 15%;
+@media only screen and (max-width: 1176px) {
+  #terms, .serv {
+    padding: 0 8%;
   }
-  
+}
+
+@media only screen and (max-width: 1075px) {
   .blurb {
     padding: 30px 50px;
   }
@@ -555,9 +561,6 @@ h2 {
 }
 
 @media only screen and (max-width: 893px) {
-  #navvie {
-    padding-left: 5%;
-  }
   
   .blurb {
     padding: 30px 30px;
