@@ -386,11 +386,6 @@ h6 {
   .carousel .item {
     height: 335px;
   }
-  
-    #secondary-menu {
-      height: 28px;
-      text-align: left;
-  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -522,7 +517,6 @@ h2 {
 */
 .burger {
   display: none;
-  /* TODO */
 }
 
 .navbar-header {

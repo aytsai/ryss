@@ -136,7 +136,7 @@ function init_map2() {
 }
 
 /* animated scroll */
-$('a[href*="#"]:not([href="#"])').click(function() {
+$('a[href*="#"]:not([href="#"]):not([href="#intro"]').click(function() {
   /* close the navbar if mobile */
   if ($('.burger').css('display') == 'block' && $('.container').hasClass('opened')) {
     $('.container').removeClass('opened').addClass('closed');
@@ -149,8 +149,10 @@ $('a[href*="#"]:not([href="#"])').click(function() {
   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
     var scrollOff;
     if (target.length) {
+      console.log(target);
       if (target == "#about" || target == "#overview")
         scrollOff = 0;
       else if ($(window).scrollTop() <= 5) {
