@@ -111,23 +111,45 @@ footer a {
 
 .homenav {
   background: rgba(255, 255, 255, 1);
-  height: 100px;
+  height: 130px;
   color: #125925;
-  border-top: 7px solid #125925;
   box-shadow: 0 3px 1px -1px rgba(100, 100, 100, 0.15);
-  transition: background 500ms, height 300ms, border-top 400ms;
+  transition: background 500ms, height 300ms;
+}
+
+#secondary-menu {
+  height: 28px;
+  width: 100%;
+  line-height: 28px;
+  color: #FFFFFF;
+  background-color: #125925;
+}
+
+#secondary-menu img {
+  height: 20px;
+}
+
+#contact-info {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#home-button {
+  position: fixed;
+  right: 0;
 }
 
 .navbar-header {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   height: auto;
   transform: translate(-50%,-50%);
   overflow: auto;
 }
 
-.navrow img {
+.navrow a img {
   width: 200px;
   transition: width 500ms;
 }
@@ -510,7 +532,7 @@ h2 {
 /* 1010px + 20px scrollbar */
 @media only screen and (min-width: 1070px) {
   #navvie {
-    padding-left: 25%;
+    padding-left: 33%;
   }
   
   #terms, .serv {
@@ -549,16 +571,12 @@ h2 {
 #navvie .dropdown {
   display: inline-block;
   float: left;
-  padding: 15px;
+  padding: 15px 15px 15px 15px;
 }
 
 @media only screen and (min-width: 769px) {
   #navvie .dropdown-toggle {
     padding-bottom: 22px;
-  }
-
-  #navvie {
-    top: 40px; /* align with the bottom of logo */
   }
 }
 
@@ -601,7 +619,7 @@ h2 {
   }
     
   .homenav {
-    height: 70px;
+    height: 100px;
   }
 
   #navvie {
