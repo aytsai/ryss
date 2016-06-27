@@ -285,7 +285,7 @@ ul li a:hover, ul li a:focus {
     flex-direction: column;
   }
   
-  .serv [class*="col-md"] {
+  .serv [class*="col-md"], .cont [class*="col-md"] {
     display: flex;
     flex-direction: column;
     padding-bottom: 15px;
@@ -304,7 +304,7 @@ ul li a:hover, ul li a:focus {
     border-radius: 15px;
   }
   
-  .serv [class*="col-md"] {
+  .serv [class*="col-md"], .cont [class*="col-md"] {
     padding-bottom: 15px;
   }
   
@@ -410,7 +410,7 @@ h6 {
   font-weight: bold;
 }
 
-.serv {
+.serv, .cont {
   padding-top: 20px;
   padding-right: 20px;
   font-size: 18px;
@@ -602,13 +602,13 @@ h2 {
 
 /* 1010px + 20px scrollbar */
 @media only screen and (min-width: 1177px) {
-  #terms, .serv {
+  #terms, .serv, .cont {
     padding: 0 8%;
   }
 }
 
 @media only screen and (max-width: 1176px) {
-  #terms, .serv {
+  #terms, .serv, .cont {
     padding: 0 8%;
   }
 }
@@ -618,7 +618,7 @@ h2 {
     padding: 30px 50px;
   }
   
-  #terms, .serv {
+  #terms, .serv, .cont {
     padding: 0 6%;
   }
 }
@@ -629,13 +629,13 @@ h2 {
     padding: 30px 30px;
   }
   
-  #terms, .serv {
+  #terms, .serv, .cont {
     padding: 0 4%;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #terms, .serv {
+  #terms, .serv, .cont {
     padding: 0 2%;
   }
   
