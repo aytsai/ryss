@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" oncontextmenu="return false;"> <!--  oncontextmenu="return false;" -->
+<html lang="en" oncontextmenu=""> <!--  oncontextmenu="return false;" -->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,57 +28,63 @@
   <body class="noselect">
     <noscript>Your browser currently has JavaScript disabled! Please turn it back on for the best viewing experience.</noscript>
 
-    <nav class="navbar navbar-default navbar-fixed-top homenav">
-          <div id="secondary-menu">
-            <div id="contact-info" class="col-xs-5 col-xs-offset-3 col-sm-4 col-sm-offset-4">
-              <img src="../static/img/phone.png" alt="Phone"> 510 477 9570 
-              <img src="../static/img/email.png" alt="Mail"> info -AT- ryss.com</div>
-            <div id="home-button" class="col-xs-2 col-xs-offset-2 col-sm-3 col-sm-offset-1">
-              <img src="../static/img/home.png" alt="Home"> <a href="../">Home</a></div>
-          </div>
-    
-          <div class="navbar-header">
-            <button type="button" class="burger navbar-toggle">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <div class="navrow col-xs-3 col-sm-4">
-              <a href="../">
-                <img class="center-block" src="../static/img/ryss.png" alt="RYSS">
-              </a>
-              </div>
-          </div>
-    </nav>
-    
-    <div id="navvie" class="col-xs-6  col-sm-8 col-sm-offset-4 col-md-6 col-md-offset-6">
-      <ul>
-        <li class="dropdown">
-          <a class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">About <span class="glyphicon glyphicon-menu-down"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="../about-us/#overview">Company Overview</a></li>
-            <li><a href="../about-us/#mission">Mission & Values</a></li>
-            <li><a href="../about-us/#facilities">Our Facilities</a></li>
-          </ul>
-        </li> <!-- About -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <span class="glyphicon glyphicon-menu-down"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="../services/#approach">Our Approach</a></li>
-            <li><a href="../services/#expertises">Project Types</a></li>
-            <li><a href="../services/#services">Our Expertises</a></li>
-          </ul>
-        </li> <!-- Services -->
-        <li class="dropdown">
-          <a href="../contact-us/" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Contact Us</span></a>
-        </li> <!-- Contact Us -->
-        <li class="dropdown">
-          <a href="../family-and-partners/" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Family & Partners</a>
-        </li> <!-- Family & Partners -->
-      </ul>
+   <nav class="navbar navbar-default navbar-fixed-top homenav">
+    <div id="secondary-menu">
+    <div class="container">
+      <img src="../static/img/phone.png" alt="Phone" /> 510 477 9570 
+      <img src="../static/img/email.png" alt="Mail" /> info -AT- ryss.com
+      
+      
+      <a href="#" id="home-button" class="navbar-right2"><img src="../static/img/home.png" alt="Home" /> Home</a> 
     </div>
+    </div>
+    <div class="navvie">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="burger navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navrow col-xs-3 col-sm-4">
+            <a href="#" class="navbar-brand">
+              <img src="../static/img/ryss.png" alt="RYSS" />
+            </a>
+          </div>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <!--<li class="dropdown">
+            <a href="../" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Home</a>
+          </li>-->
+          <!-- Home -->
+          <li class="dropdown">
+            <a class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">About <span class="glyphicon glyphicon-menu-down"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="../about-us/#overview">Company Overview</a></li>
+              <li><a href="../about-us/#mission">Mission & Values</a></li>
+              <li><a href="../about-us/#facilities">Our Facilities</a></li>
+            </ul>
+          </li> <!-- About -->
+          <li class="dropdown">
+            <a class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <span class="glyphicon glyphicon-menu-down"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="../services/#approach">Our Approach</a></li>
+              <li><a href="../services/#expertises">Project Types</a></li>
+              <li><a href="../services/#services">Our Expertises</a></li>
+            </ul>
+          </li> <!-- Services -->
+          <li class="dropdown">
+            <a href="../contact-us/" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Contact Us</span></a>
+          </li> <!-- Contact Us -->
+          <li class="dropdown no-top-border">
+            <a href="../family-and-partners/" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Family & Partners</a>
+          </li> <!-- Family & Partners -->
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <div class="container" id="approach">
+    <div class="container2" id="approach">
       <div class="serv">
         <div class="row">
           <div class="current-page">
@@ -89,15 +95,12 @@
       <div class="serv">
         <div class="row">
           <h5>The Ryss Lab Approach</h5>
-          <div class="col-md-8">
+          <div class="col-md-12">
             <p style="font-weight: strong; font-style: italic;">Communication. Collaboration. Innovation.</p>
 
             <p>At Ryss Lab, we aim to offer the highest level of technical expertise to all projects. A close, cooperative relationship with our clients helps move development forward. Collaboration is essential for custom synthesis and contract research work.</p>
 
             <p>The added value of our scientists’ professional experience, knowledge, and insights make us an idea partner for research and synthesis projects.</p>
-          </div>
-          <div class="col-md-4">
-            <img src="../static/img/approach.png" style="width: 100%;" alt="Ryss Approach">
           </div>
         </div>
         <div class="row">
@@ -108,11 +111,12 @@
           </div>
           <div class="col-md-6">
             <h6>Confidentiality</h6>
-            <p>Ryss Lab has strict protocols in place to protect client confidentiality. Our scientists understand the importance of intellectual property and adhere to guidelines to ensure the interests of our clients are protected.</p>
+              <p>Ryss Lab has strict protocols in place to protect client confidentiality. Our scientists understand the importance of intellectual property and adhere to guidelines to ensure the interests of our clients are protected.</p>
+              <div class="img-bottom"><img src="../static/img/confidentiality.png" style="max-width: 320px;" alt="Confidentiality"></div>
           </div>
         </div>
       </div>
-      <div class="serv grey-sec" id="expertises">
+      <div class="serv" id="expertises">
         <div class="row">
           <h5>Project Types</h5>
           <div class="col-md-12"> 
@@ -128,12 +132,13 @@
       </div>
       <div class="serv" id="services">
         <div class="row">
-          <h5>Our Expertises</h5>
-          <div class="col-md-12">
-            <p>Our experienced technical staff enjoys working in close cooperation with clients to achieve quality results.</p>
-
-            <p>Our scientists have strong backgrounds in the following:
-              <ul>
+          <div class="col-md-4">
+          
+          <h5 style="padding-left:0px">Our Expertises</h5>
+            <img class="img-bottom" src="../static/img/c.png" style="max-width: 300px;" alt="Expertises">
+          </div>
+          <div class="col-md-8 text-bottom">
+            <p>Our experienced technical staff enjoys working in close cooperation with clients to achieve quality results and have strong backgrounds in the following: <ul class="ryss-list">
                 <li>Small molecule synthesis</li>
                 <li>Fine chemical intermediates, building blocks, analogs</li>
                 <li>Complex organic synthesis</li>
@@ -142,8 +147,11 @@
                 <li>Custom synthesis of novel compounds</li>
                 <li>Scale-up synthesis</li>
               </ul></p>
-
-            <p>Ryss Lab services include custom synthesis, contract research and development, process research, and analytical research.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+          <p>Ryss Lab services include custom synthesis, contract research and development, process research, and analytical research.</p>
           </div>
         </div>
       </div>
