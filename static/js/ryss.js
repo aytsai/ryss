@@ -6,14 +6,12 @@
 $('.burger').on('click', function(event) {
   event.stopPropagation();
   event.preventDefault();
-  if ($('.container').hasClass('opened')) {
-    $('.container').removeClass('opened').addClass('closed');
-    $('#navvie').removeClass('opened').addClass('closed');
+  if ($('.container2').hasClass('opened')) {
+    $('.container2').removeClass('opened').addClass('closed');
     $('nav').removeClass('opened').addClass('closed');
     $('footer').removeClass('opened').addClass('closed');
   } else {
-    $('.container').removeClass('closed').addClass('opened');
-    $('#navvie').removeClass('closed').addClass('opened');
+    $('.container2').removeClass('closed').addClass('opened');
     $('nav').removeClass('closed').addClass('opened');
     $('footer').removeClass('closed').addClass('opened');
   }
@@ -32,7 +30,7 @@ $('.burger').on('click', function(event) {
    -> if navbar already opened, navbar regular
    -> if navbar closed, navbar regular
 */
-var targetHeight = 5; // 
+var targetHeight = 28; // 
 
 function navAdjust (x) {
   // top of the page
@@ -43,41 +41,59 @@ function navAdjust (x) {
     var logotall = '200px';
     var logomedium = '130px';
     var setHeight, setlogoHeight;
-    if ($('.burger').css('display') != 'block') {
-      $('#navvie').css('top', '40px');
+    if ($('.burger').css('display') != 'block') { // not in mobile
       setHeight = tall;
       setlogoHeight = logotall;
+      $('.container2').css('margin-top', '108px');
+      $('.carousel-text-right').css('padding-top', '108px');
+      $('.carousel-text-left').css('padding-top', '108px');
+      $('.navbar-brand').css('line-height', '50px');
+      $('.navbar-brand').css('padding-top', '20px');
+      $('.navbar-brand').css('padding-bottom', '20px');
+      $('.navbar-brand').css('height', '80px');
+      $('.navbar-nav li .dropdown-toggle').css('line-height', '50px');
+      if (window.matchMedia('(max-width: 773px)').matches) {
+        $('.carousel-text-right').css('padding-top', '58px');
+        $('.carousel-text-left').css('padding-top', '58px');
+      }
     }
     else {
-      $('#navvie').css('top', '0px');
-      $('#navvie .dropdown').css('padding-top', '0px');
+      $('.navbar-right').css('top', '0px');
+      $('.navbar-right').css('margin-top', '0px');
+      $('.navbar-right .dropdown').css('padding-top', '0px');
       setHeight = medium;
       setlogoHeight = logomedium;
+      $('.container2').css('margin-top', '58px');
+      $('.carousel-text-right').css('padding-top', '58px');
+      $('.carousel-text-left').css('padding-top', '58px');
+      $('.navbar-brand').css('padding-top', '10px');
+      $('.navbar-brand').css('padding-bottom', '10px');
+      $('.navbar-brand').css('line-height', '25px');
+      $('.navbar-brand').css('height', '53px');
+    $('.navbar-nav li .dropdown-toggle').css('line-height', '22px');
     }    
+    $('#secondary-menu').css('background-color', 'rgba(0, 0, 0, 0.6)'); //'rgba(0, 102, 41, 0.5)');
+    $('.navvie').css('background-color', 'rgba(255, 255, 255, 0.95)');
     $('.homenav').css('height', setHeight);
-    //$('.homenav').css('border-top', '7px solid #125925');
-    $('.navbar a img').css('width', setlogoHeight);
-    $('.navbar-header').css('top', '64%');
-    $('.container').css('margin-top', setHeight);
-    if (window.matchMedia('(min-width: 769px)').matches) {
-      $('#navvie .dropdown-toggle').css('padding-bottom', '22px');
-      $('#navvie .dropdown').css('padding-top', '23px');
-    }
-    else
-      $('.navbar-header').css('top', '68%');
   }
   // scrolled
   else {
     $('.homenav').css('height', '80px');
-    if ($('.burger').css('display') != 'block')
+    $('.navbar-brand').css('height', '53px');
+    $('.navbar-brand').css('padding-top', '10px');
+    $('.navbar-brand').css('padding-bottom', '10px');
+    if ($('.burger').css('display') != 'block') // not on mobile
       $('#navvie').css('top', '28px');
-    $('.navbar a img').css('width', '130px');
-    $('.navbar-header').css('top', '70%');
-    //$('.homenav').css('border-top', '0px');
-    $('.container').css('margin-top', '50px');
+    $('.navbar-brand').css('line-height', '25px');
+    $('.container2').css('margin-top', '58px');
+    $('.carousel-text-right').css('padding-top', '58px');
+    $('.carousel-text-left').css('padding-top', '58px');
+    $('#secondary-menu').css('background-color', '#1F542F');
+    $('.navbar-nav li .dropdown-toggle').css('line-height', '22px');
+    $('.navvie').css('background-color', 'rgba(255, 255, 255, 1)');
     if (window.matchMedia('(min-width: 769px)').matches) {
-      $('#navvie .dropdown').css('padding-top', '15px');
-      $('#navvie .dropdown-toggle').css('padding-bottom', '20px');
+      $('.navbar-right').css('top', '');
+      $('.navbar-right').css('margin-top', '');
     }
   }
 }
@@ -110,14 +126,21 @@ $(document).scroll(function(e){
   navAdjust(scrollPercent);
 });
 
-$('.container').click(function() {
-  if ($('.container').hasClass('opened')) {
-    $('.container').removeClass('opened').addClass('closed');
-    $('#navvie').removeClass('opened').addClass('closed');
+$('.container2').click(function() {
+  if ($('.container2').hasClass('opened')) {
+    $('.container2').removeClass('opened').addClass('closed');
     $('nav').removeClass('opened').addClass('closed');
     $('footer').removeClass('opened').addClass('closed');
   }
-})
+});
+
+$('#home-button').click(function() {
+  if ($('.container2').hasClass('opened')) {
+    $('.container2').removeClass('opened').addClass('closed');
+    $('nav').removeClass('opened').addClass('closed');
+    $('footer').removeClass('opened').addClass('closed');
+  }
+});
 
 function init_map() {
   var myOptions = {zoom: 14, center: new google.maps.LatLng(37.6082651,-122.0829269), mapTypeId: google.maps.MapTypeId.ROADMAP};
@@ -138,9 +161,8 @@ function init_map2() {
 /* animated scroll */
 $('a[href*="#"]:not([href="#"]):not([href="#intro"]').click(function() {
   /* close the navbar if mobile */
-  if ($('.burger').css('display') == 'block' && $('.container').hasClass('opened')) {
-    $('.container').removeClass('opened').addClass('closed');
-    $('#navvie').removeClass('opened').addClass('closed');
+  if ($('.burger').css('display') == 'block' && $('.container2').hasClass('opened')) {
+    $('.container2').removeClass('opened').addClass('closed');
     $('nav').removeClass('opened').addClass('closed');
     $('footer').removeClass('opened').addClass('closed');
   }
