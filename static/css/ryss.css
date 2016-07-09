@@ -201,6 +201,21 @@ footer a, #home-button {
   margin-top: auto;
 }
 
+.img-center {
+height: 100%;
+width: 100%;
+  vertical-align:middle;
+}
+
+.img-center img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 @media screen and (min-width: 769px) {
   .img-bottom {
     margin-bottom: 25px;
