@@ -100,7 +100,9 @@ function navAdjust (x) {
 
 $(document).ready(function(){
   navAdjust(targetHeight);
-  if ($('#hqmap').length) {
+  if ($('#hqmap').length)
+    google.maps.event.addDomListener(window, 'load', init_mapm);
+  if ($('#taiwan').length) {
     google.maps.event.addDomListener(window, 'load', init_map);
     google.maps.event.addDomListener(window, 'load', init_map2);
   }
@@ -148,6 +150,14 @@ function init_map() {
   marker = new google.maps.Marker({map: map,
                                    position: new google.maps.LatLng(37.6082651,-122.0829269),
                                    icon: '../static/img/marker.png'});
+}
+
+function init_mapm() {
+  var myOptions = {zoom: 14, center: new google.maps.LatLng(37.6082651,-122.0829269), mapTypeId: google.maps.MapTypeId.ROADMAP};
+  map = new google.maps.Map(document.getElementById("hqmap"), myOptions);
+  marker = new google.maps.Marker({map: map,
+                                   position: new google.maps.LatLng(37.6082651,-122.0829269),
+                                   icon: './static/img/marker.png'});
 }
 
 function init_map2() {

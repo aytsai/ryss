@@ -84,14 +84,13 @@ body {
 
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: -200;
   width: 100%;
-  padding: 5px;
+  padding: 10px;
   background-color: #1F542F; 
   color: white;
-  border-top: 4px solid #1C3E47;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -256,6 +255,10 @@ ul li a:hover, ul li a:focus {
   height: auto;
 }
 
+footer h3, footer div {
+  text-align: left;
+}
+
 @media only screen and (min-width: 993px) {
   .intro-section {
     padding: 30px 40px;
@@ -268,7 +271,7 @@ ul li a:hover, ul li a:focus {
     display:         flex;
     flex-wrap: wrap;
   }
-  .serv .row > [class*='col-'] {
+  .serv .row > [class*='col-'], footer .row {
     display: flex;
     flex-direction: column;
   }
@@ -289,6 +292,10 @@ ul li a:hover, ul li a:focus {
     display: flex;
     flex-direction: column;
     padding-bottom: 15px;
+  }
+
+  .head {
+    display: block !important;
   }
 }
 
