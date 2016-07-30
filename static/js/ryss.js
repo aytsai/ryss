@@ -33,6 +33,15 @@ $('.burger').on('click', function(event) {
 var targetHeight = 28; // 
 
 function navAdjust (x) {
+  if ($("#about-img").length) {
+    if (window.matchMedia('(min-width: 992px)').matches) {
+      $("#about-img").css('height', $("#about-section").height());
+    }
+    else {
+      
+    }
+  }
+  
   // top of the page
   if (x >= 0){
     // if burger is not displayed

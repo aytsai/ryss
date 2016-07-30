@@ -202,19 +202,26 @@ footer a, #home-button {
 }
 
 .img-center {
-height: 100%;
-width: 100%;
+  display: table;
+  height: 100%;
+  width: 100%;
   vertical-align:middle;
 }
 
 .img-center img {
+  display: table-cell;
     position: absolute;
-    top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
 }
+
+@media screen and (min-width: 992px) {
+  .img-center img {
+    max-height: 200px;
+  }
+}
+
 
 @media screen and (min-width: 769px) {
   .img-bottom {
